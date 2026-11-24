@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Natria Store</title>
+<style>
+:root{--bg:#090d0b;--panel:#171e1b;--panel2:#202925;--green:#20d45a;--green2:#00a83c;--text:#f2f6f3;--muted:#aab6ae;--border:#303b34}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{display:flex;align-items:center;gap:24px;padding:18px 24px;border-bottom:1px solid #1c2921;position:sticky;top:0;background:#090d0bf2;z-index:3;backdrop-filter:blur(10px)}
+.brand{display:flex;align-items:center;gap:12px;min-width:230px}.logo{display:grid;place-items:center;width:64px;height:64px;border:2px solid var(--green2);border-radius:18px;color:var(--green);font-size:44px;font-weight:900;text-shadow:0 0 18px #16df5b;box-shadow:inset 0 0 18px #0b2817}
+.brand h1{font-size:25px;margin:0}.brand p{margin:2px 0 0;color:var(--muted);font-size:13px}.search{flex:1;max-width:560px;position:relative}.search input{width:100%;border:1px solid var(--border);border-radius:30px;padding:14px 18px 14px 46px;background:#1a2028;color:white;font-size:16px;outline:none}.search input:focus{border-color:var(--green)}.search span{position:absolute;left:16px;top:12px;font-size:21px;color:#aab4bd}
+nav{display:flex;gap:18px;margin-left:auto}nav button{border:0;background:none;color:#c3cbc6;font-size:14px;cursor:pointer;padding:8px}nav button:hover,nav button.active{color:var(--green)
+}
+main{display:flex;gap:22px;padding:20px 24px}.sidebar{width:205px;flex-shrink:0}.sidebtn,.filter{border:1px solid transparent;background:transparent;color:#c1c9c4;padding:13px 16px;border-radius:15px;cursor:pointer;text-align:left;font-size:15px;width:100%;margin-bottom:6px}.sidebtn.active,.filter.active{background:linear-gradient(120deg,#18bd4b,#087c2c);color:#fff}.sidebtn:hover,.filter:hover{background:#202923}.side-note{margin-top:22px;padding:18px;background:var(--panel);border:1px solid var(--border);border-radius:18px;text-align:center;color:var(--muted)}.side-note strong{display:block;color:#dfe8e1;margin:8px 0}
+.content{flex:1;min-width:0}.hero{min-height:255px;border:1px solid #14552c;border-radius:24px;padding:32px;display:flex;align-items:center;background:radial-gradient(ellipse at 80% 40%,#0a4a24 0%,#07130b 48%,#0c1110 100%);overflow:hidden;position:relative}.hero:after{content:'N';position:absolute;right:7%;top:-30px;font-size:260px;font-weight:900;color:#19d95320;transform:rotate(-10deg)}.hero h2{font-size:clamp(32px,5vw,64px);margin:0;letter-spacing:-2px}.hero h2 span{color:var(--green)}.hero p{font-size:clamp(18px,2vw,25px);color:#d3ddd5;margin:8px 0 22px}.cta{background:var(--green);border:0;color:#07110a;border-radius:30px;padding:13px 22px;font-weight:800;cursor:pointer;font-size:16px}.cta:hover{filter:brightness(1.08)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.filter{width:auto;margin:0;padding:10px 16px;background:var(--panel);border:1px solid var(--border);border-radius:24px;text-align:center}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.app{background:linear-gradient(145deg,#1b2228,#171d20);border:1px solid var(--border);border-radius:20px;padding:16px;display:flex;flex-direction:column;min-height:220px}.app-top{display:flex;gap:14px;align-items:center}.appicon{width:76px;height:76px;border-radius:18px;display:grid;place-items:center;flex-shrink:0;font-size:35px;font-weight:900;background:linear-gradient(145deg,#183b26,#08140c);border:1px solid #2b5940}.app h3{margin:0;font-size:18px}.app p{color:#c0cbc3;margin:6px 0;font-size:14px}.meta{color:#c4cfc7;font-size:13px;margin:10px 0}.download{margin-top:auto;width:100%;background:linear-gradient(90deg,#17c84e,#19ad45);color:#04100a;border:0;border-radius:12px;padding:12px;font-weight:800;font-size:15px;cursor:pointer}.download:hover{filter:brightness(1.08)}.empty{grid-column:1/-1;color:var(--muted);text-align:center;padding:36px}.footer{margin-top:24px;color:#829088;text-align:center;font-size:13px;padding:18px;border-top:1px solid #1b2720}
+@media(max-width:1050px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}nav{gap:5px}.sidebar{width:165px}}
+@media(max-width:720px){header{padding:12px;gap:12px;flex-wrap:wrap}.brand{min-width:0}.logo{width:48px;height:48px;font-size:32px;border-radius:14px}.brand h1{font-size:21px}.brand p{display:none}.search{order:3;max-width:none;flex-basis:100%}nav{margin-left:auto}.nav-extra{display:none}main{padding:12px;display:block}.sidebar{width:auto;display:flex;overflow:auto;gap:6px;margin-bottom:12px}.sidebtn{width:auto;white-space:nowrap;margin:0;padding:10px 13px}.side-note{display:none}.hero{min-height:210px;padding:22px}.hero:after{right:-12%;font-size:180px}.filters{display:none}.grid{grid-template-columns:1fr}.app{min-height:180px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="logo">N</div><div><h1>Natria Store</h1><p>Твій магазин Android-додатків</p></div></div>
+  <div class="search"><span>⌕</span><input id="search" type="search" placeholder="Пошук додатків..." aria-label="Пошук додатків"></div>
+  <nav><button class="active" data-nav="home">⌂ Головна</button><button data-nav="categories">▦ Категорії</button><button data-nav="about" class="nav-extra">ⓘ Про нас</button></nav>
+</header>
+<main>
+<aside class="sidebar" aria-label="Категорії">
+<button class="sidebtn active" data-category="all">⌂ Усі додатки</button><button class="sidebtn" data-category="games">🎮 Ігри</button><button class="sidebtn" data-category="ai">✦ ШІ</button><button class="sidebtn" data-category="apps">▦ Програми</button><button class="sidebtn" data-category="popular">★ Популярні</button><button class="sidebtn" data-category="new">♨ Новинки</button>
+<div class="side-note"><div style="font-size:30px">🛡️</div><strong>Завантажуй обережно</strong>Встановлюй APK лише з джерел, яким довіряєш.</div>
+</aside>
+<section class="content">
+<div class="hero"><div style="position:relative;z-index:1"><h2>Natria <span>Store</span></h2><p>Знайди свій наступний додаток!</p><button class="cta" id="browse">↓ Перейти до додатків</button></div></div>
+<div class="filters" aria-label="Фільтри"><button class="filter active" data-category="all">▦ Усі</button><button class="filter" data-category="games">🎮 Ігри</button><button class="filter" data-category="ai">✦ ШІ</button><button class="filter" data-category="apps">▦ Програми</button><button class="filter" data-category="popular">★ Популярні</button><button class="filter" data-category="new">♨ Новинки</button></div>
+<div class="grid" id="appGrid"></div>
+<div class="footer">Natria Store · Демоверсія 1.0 · APK-файли додаються власником сайту</div>
+</section>
+</main>
+<script>
+// Add a real APK link in the download field for each app to enable downloading.
+const apps = [
+ {name:'Natria AI',desc:'Штучний інтелект у твоєму телефоні!',category:'ai',icon:'N',rating:'—',size:'APK не додано',popular:true,new:true,download:''},
+ {name:'Roblox',desc:'Грай з друзями у мільйонах ігор!',category:'games',icon:'◇',rating:'—',size:'Посилання не додано',popular:true,new:false,download:''},
+ {name:'Brawl Stars',desc:'Бійся, грай, перемагай!',category:'games',icon:'⭐',rating:'—',size:'Посилання не додано',popular:true,new:false,download:''},
+ {name:'Poppy Playtime',desc:'Жахливі пригоди на фабриці іграшок.',category:'games',icon:'🧸',rating:'—',size:'Посилання не додано',popular:false,new:true,download:''},
+ {name:'Minecraft',desc:'Будуй, виживай, досліджуй світ!',category:'games',icon:'🟩',rating:'—',size:'Посилання не додано',popular:true,new:false,download:''},
+ {name:'Telegram',desc:'Швидкий месенджер для спілкування.',category:'apps',icon:'➤',rating:'—',size:'Посилання не додано',popular:true,new:false,download:''}
+];
+const grid=document.getElementById('appGrid'),search=document.getElementById('search');let category='all';
+function render(){const q=search.value.trim().toLowerCase();const filtered=apps.filter(a=>(category==='all'||category==='popular'&&a.popular||category==='new'&&a.new||a.category===category)&&(!q||a.name.toLowerCase().includes(q)||a.desc.toLowerCase().includes(q)));grid.innerHTML='';if(!filtered.length){grid.innerHTML='<div class="empty">Нічого не знайдено 😕</div>';return;}filtered.forEach(a=>{const card=document.createElement('article');card.className='app';card.innerHTML=`<div class="app-top"><div class="appicon" aria-hidden="true">${a.icon}</div><div><h3>${a.name}</h3><p>${a.desc}</p></div></div><div class="meta">${a.popular?'★ Популярний · ':''}${a.new?'✨ Новинка · ':''}${a.size}</div><button class="download">↓ Завантажити</button>`;const btn=card.querySelector('.download');if(a.download){btn.addEventListener('click',()=>window.open(a.download,'_blank','noopener'));}else{btn.textContent='APK ще не додано';btn.disabled=true;btn.style.opacity='.65';btn.style.cursor='not-allowed';}grid.appendChild(card);});}
+document.querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',()=>{category=b.dataset.category;document.querySelectorAll('[data-category]').forEach(x=>x.classList.toggle('active',x.dataset.category===category));render();}));search.addEventListener('input',render);document.getElementById('browse').addEventListener('click',()=>document.getElementById('appGrid').scrollIntoView({behavior:'smooth'}));document.querySelector('[data-nav="about"]').addEventListener('click',()=>alert('Natria Store — демо-магазин Android-додатків. Тут публікуються посилання на APK, додані власником.'));document.querySelector('[data-nav="categories"]').addEventListener('click',()=>document.querySelector('.filters').scrollIntoView({behavior:'smooth'}));render();
+</script>
+</body></html>
